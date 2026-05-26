@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ld theme toggle</title>
+    <script src="./ld-theme-toggle.js" defer></script>
+    <style>
+      :root {
+        color-scheme: light dark;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+      }
+
+      body[data-theme="light"] {
+        background: #f8fafc;
+        color: #111827;
+      }
+
+      body[data-theme="dark"] {
+        background: #111827;
+        color: #f8fafc;
+      }
+
+      main {
+        display: grid;
+        gap: 1rem;
+        margin: 0 auto;
+        max-width: 48rem;
+        padding: 3rem 1.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>ld theme toggle</h1>
+      <ld-theme-toggle></ld-theme-toggle>
+      <p>Body-attributet <code>data-theme</code> sätts till <code>light</code> eller <code>dark</code>.</p>
+    </main>
+  </body>
+</html>
